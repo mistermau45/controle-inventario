@@ -1,0 +1,5 @@
+{
+  "name": "GloboStock - Inventário Moderno",
+  "description": "Sistema de gestão de inventário com visual glassmorphism inspirado na Globo.com, incluindo KPIs, gráficos e importação em massa.",
+  "requestFramePermissions": []
+}
