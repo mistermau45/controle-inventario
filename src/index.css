@@ -27,15 +27,34 @@
 }
 
 .glass-card {
-  @apply rounded-2xl shadow-xl;
+  @apply rounded-2xl shadow-xl transition-all duration-300;
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.glass-card:hover {
+  @apply shadow-2xl shadow-purple-500/10;
+  border-color: rgba(168, 85, 247, 0.4);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(243, 232, 255, 0.8) 100%);
+}
+
 .dark .glass-card {
   background-color: rgba(24, 24, 27, 0.6);
   border-color: rgba(39, 39, 42, 0.5);
+}
+
+.dark .glass-card:hover {
+  background: linear-gradient(135deg, rgba(24, 24, 27, 0.7) 0%, rgba(59, 7, 100, 0.3) 100%);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.hover-purple-row:hover {
+  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+}
+
+.dark .hover-purple-row:hover {
+  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.1) 50%, transparent 100%);
 }
 
 /* Custom scrollbar */

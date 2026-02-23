@@ -285,7 +285,7 @@ export default function App() {
             </button>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="hidden sm:flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform active:scale-95"
+              className="hidden sm:flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 hover:text-white dark:hover:text-white transition-all hover:scale-105 active:scale-95 shadow-lg shadow-purple-500/20"
             >
               <Plus size={18} />
               Novo Produto
@@ -312,7 +312,7 @@ export default function App() {
                 <div className="flex gap-3">
                   <button 
                     onClick={() => setIsImportModalOpen(true)}
-                    className="flex items-center gap-2 glass px-4 py-2 rounded-xl font-bold text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                    className="flex items-center gap-2 glass px-4 py-2 rounded-xl font-bold text-sm hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-indigo-500/10 hover:border-purple-500/50 transition-all"
                   >
                     <Upload size={18} />
                     Importar CSV
@@ -442,7 +442,7 @@ export default function App() {
                     </thead>
                     <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
                       {filteredItems.map((item) => (
-                        <tr key={item.id} className="hover:bg-zinc-50/80 dark:hover:bg-zinc-900/30 transition-colors group">
+                        <tr key={item.id} className="hover-purple-row border-b border-zinc-100 dark:border-zinc-800 transition-colors group">
                           <td className="px-6 py-5 font-mono text-xs text-zinc-500">{item.id}</td>
                           <td className="px-6 py-5">
                             <div className="flex flex-col">
