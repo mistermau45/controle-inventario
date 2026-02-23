@@ -431,27 +431,27 @@ export default function App() {
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500">ID</th>
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500">Produto</th>
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500 text-right">Preço</th>
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500 text-center">Qtd</th>
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500 text-right">Valor Total</th>
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500 text-center">Status</th>
-                        <th className="px-6 py-5 text-xs font-black uppercase tracking-widest text-zinc-500 text-right">Ações</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500">ID</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500">Produto</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500 text-right">Preço</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500 text-center">Qtd</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500 text-right">Valor Total</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500 text-center">Status</th>
+                        <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-zinc-500 text-right">Ações</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
                       {filteredItems.map((item) => (
                         <tr key={item.id} className="hover-purple-row border-b border-zinc-100 dark:border-zinc-800 transition-colors group">
-                          <td className="px-6 py-5 font-mono text-xs text-zinc-500">{item.id}</td>
-                          <td className="px-6 py-5">
+                          <td className="px-8 py-4 font-mono text-xs text-zinc-500">{item.id}</td>
+                          <td className="px-8 py-4">
                             <div className="flex flex-col">
                               <span className="font-bold text-zinc-900 dark:text-white">{item.name}</span>
                               <span className="text-xs text-zinc-500 truncate max-w-[200px]">{item.description}</span>
                             </div>
                           </td>
-                          <td className="px-6 py-5 text-right font-medium">{formatCurrency(item.unit_price)}</td>
-                          <td className="px-6 py-5 text-center">
+                          <td className="px-8 py-4 text-right font-medium">{formatCurrency(item.unit_price)}</td>
+                          <td className="px-8 py-4 text-center">
                             <span className={cn(
                               "inline-flex items-center justify-center w-10 h-10 rounded-full font-bold text-sm",
                               item.quantity < item.stock_level ? "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400" : "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
@@ -459,8 +459,8 @@ export default function App() {
                               {item.quantity}
                             </span>
                           </td>
-                          <td className="px-6 py-5 text-right font-bold text-globo-blue">{formatCurrency(item.stock_value)}</td>
-                          <td className="px-6 py-5 text-center">
+                          <td className="px-8 py-4 text-right font-bold text-globo-blue">{formatCurrency(item.stock_value)}</td>
+                          <td className="px-8 py-4 text-center">
                             {item.discontinued ? (
                               <span className="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-[10px] font-black uppercase rounded-full">Descontinuado</span>
                             ) : item.quantity < item.stock_level ? (
@@ -469,7 +469,7 @@ export default function App() {
                               <span className="px-3 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-[10px] font-black uppercase rounded-full">Ativo</span>
                             )}
                           </td>
-                          <td className="px-6 py-5 text-right">
+                          <td className="px-8 py-4 text-right">
                             <button 
                               onClick={() => handleDeleteItem(item.id)}
                               className="p-2 text-zinc-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 rounded-lg transition-all opacity-0 group-hover:opacity-100"

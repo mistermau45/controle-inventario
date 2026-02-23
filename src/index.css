@@ -49,12 +49,27 @@
   border-color: rgba(168, 85, 247, 0.3);
 }
 
+.hover-purple-row {
+  @apply transition-all duration-300;
+}
+
 .hover-purple-row:hover {
-  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+  background: linear-gradient(90deg, 
+    rgba(168, 85, 247, 0) 0%, 
+    rgba(168, 85, 247, 0.03) 25%, 
+    rgba(168, 85, 247, 0.03) 75%, 
+    rgba(168, 85, 247, 0) 100%
+  );
+  backdrop-filter: blur(4px);
 }
 
 .dark .hover-purple-row:hover {
-  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.1) 50%, transparent 100%);
+  background: linear-gradient(90deg, 
+    rgba(168, 85, 247, 0) 0%, 
+    rgba(168, 85, 247, 0.08) 25%, 
+    rgba(168, 85, 247, 0.08) 75%, 
+    rgba(168, 85, 247, 0) 100%
+  );
 }
 
 /* Custom scrollbar */
